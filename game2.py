@@ -1,9 +1,24 @@
 import csv
+import operator
+import pandas as pd
 
-with open('gameData.csv', 'r') as csv_file:
-    csv_reader = csv.reader(csv_file)
+data = pd.read_csv("gameData.csv")
+data.sort_values("Points", axis = 0, ascending = False, inplace= True, na_position= 'last')
 
-    for line in csv_reader:
-        print(line[0]) # Just printing the whole csv file. We can use line[x][x] for a specific column where x is the column number starting from 0.
+# Return the top five players who got the most number of points. 
+topFive = data.head(5)
+print("====================================================")
+print("Top five players who got the most number of points: ")
+print("====================================================")
+print(topFive)
+print('\n')
 
-    
+# Return the bottom five players who got the least number of points. 
+print("========================================================")
+print("Bottom five players who got the least number of points: ")
+print("========================================================")
+bottomFive = data.tail(5)
+print(bottomFive)
+print('\n')
+
+
