@@ -30,13 +30,20 @@ print('\n')
 print("=============================================================")
 print("Players who scored more than the average for each game:    ")
 print("=============================================================")
+<<<<<<< HEAD
 #data = pd.read_csv("gameData.csv")
 #nextData = data.reindex(['Game', 'Player_ID', 'Date_Of_Play', 'Points'], axis = 1)
+=======
+>>>>>>> 19e71babe078d27009756288f4e8c12acdcf343f
 average = data['Points'].mean()
 
 gameOnePlayer, gameTwoPlayer, gameThreePlayer, gameFourPlayer, gameFivePlayer = 0, 0, 0, 0, 0
 
+<<<<<<< HEAD
 for i in range(len(data['Game'])):
+=======
+for i in range(len(data['Points'])):
+>>>>>>> 19e71babe078d27009756288f4e8c12acdcf343f
 
     firstColumn = data["Game"]
     secondColumn = data["Points"]
@@ -213,3 +220,4 @@ print(selectedData2.head(5))
 
 #print(max(data['Date_Of_Play'].head(5)))
 """
+
